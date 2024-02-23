@@ -3,6 +3,8 @@ import { ThreeItemGrid } from 'components/grid/three-items';
 import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
 
+import { getCollectionProducts } from 'lib/shopify';
+
 export const runtime = 'edge';
 
 export const metadata = {
@@ -13,12 +15,21 @@ export const metadata = {
 };
 
 export default async function HomePage() {
+  const homepageItems = await getCollectionProducts({
+    collection: 'hidden-homepage-featured-items'
+  });
+  console.log('homepageItems', homepageItems);
+
   return (
     <>
+      {homepageItems}
+      {/* @ts-expect-error Server Component */}
       <ThreeItemGrid />
       <Suspense>
+        {/* @ts-expect-error Server Component */}
         <Carousel />
         <Suspense>
+          {/* @ts-expect-error Server Component */}
           <Footer />
         </Suspense>
       </Suspense>

@@ -35,10 +35,10 @@ devDependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.5)
   '@types/node':
-    specifier: 20.8.9
+    specifier: ^20.8.9
     version: 20.8.9
   '@types/react':
-    specifier: 18.2.33
+    specifier: ^18.2.33
     version: 18.2.33
   '@types/react-dom':
     specifier: 18.2.14
@@ -77,7 +77,7 @@ devDependencies:
     specifier: ^3.3.5
     version: 3.3.5
   typescript:
-    specifier: 5.2.2
+    specifier: ^5.2.2
     version: 5.2.2
 
 packages:
