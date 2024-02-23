@@ -12,7 +12,7 @@ export const metadata = {
   openGraph: {
     type: 'website'
   }
-}; 
+};
 
 export default async function HomePage() {
   const homepageItems = await getCollectionProducts({
